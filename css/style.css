@@ -1,0 +1,170 @@
+:root {
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+
+    --tWhiteParagraphs: hsla(0, 0%, 100%, 0.75);
+    --grayBGHeadButtons: hsl(0, 0%, 95%);
+
+    --fLexen: 'Big Shoulders Display', cursive;
+    --fBigShoulders:'Lexend Deca', sans-serif;
+ 
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   }
+
+   
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+/* Globales */
+h1 {
+    color: var(--grayBGHeadButtons);
+    font-family: var(--fLexen);
+    font-size: 4.2rem;
+}
+
+main p {
+    color: var(--tWhiteParagraphs);
+    font-family: var(--fBigShoulders);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+/* contenedor */
+.contenedor {
+    max-width: 80rem;
+    min-height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
+}
+
+.margintop{
+    margin-top: 2rem;
+}
+
+/* izquierda */
+.izquierda {
+    background-color: var(--brightOrange);
+    padding: 3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+/* centro */
+.centro {
+    background-color: var(--darkCyan);
+    padding: 3rem;
+}
+/* derecha */
+.derecha {
+    background-color: var(--veryDarkCyan);
+    padding: 3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.boton {
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1.2rem 3rem;
+    margin-top: 13rem;
+    
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    color: var(--grayBGHeadButtons);
+}
+
+.color1 {
+    color: var(--brightOrange);
+    font-family: var(--fBigShoulders);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.color2 {
+    color: var(--darkCyan);
+    font-family: var(--fBigShoulders);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.color3 {
+    color: var(--veryDarkCyan);
+    font-family: var(--fBigShoulders);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* MQ */
+@media (max-width: 375px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: none;
+    }
+    
+    .izquierda {
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .derecha {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .boton {
+        margin-top: 3rem;
+    }
+}
+
+/* footer */
+.footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.link {
+    text-decoration: none;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: hotpink;
+  }
